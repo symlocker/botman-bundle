@@ -24,7 +24,7 @@ so add following code to composer.json in section "repositories"
 
 - composer.json "require" section have to contain bundle name
 ```code
-"symlocker/botman-bundle": "*" 
+"symlocker/botman-bundle": "dev-master" 
 ```
 
 - finally update composer requirements
