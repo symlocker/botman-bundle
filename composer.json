@@ -1,0 +1,32 @@
+{
+    "name": "symlocker/botman-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "description": "The bundle integrate BotMan library into Symfony framework",
+    "keywords": ["bot", "botman", "chatbot", "symfony", "bundle"],
+    "homepage": "https://github.com/symlocker/botman-bundle",
+    "authors": [{"name": "Roman Yurchenko", "email": "yurchenkoromanvladimirovich@gmail.com"}],
+    "require": {
+        "php": "^7.1",
+        "botman/botman": "~2.0",
+        "symfony/http-kernel": "^4.3",
+        "symfony/dependency-injection": "^4.3",
+        "symfony/config": "^4.3"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Symlocker\\BotManBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symlocker\\BotManBundle\\Tests\\": "tests/"
+        }
+    }
+}

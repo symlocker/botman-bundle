@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+           http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!--transport-->
+        <service id="symlocker_botman.curl" class="BotMan\BotMan\Http\Curl" />
+        <service id="BotMan\BotMan\Http\Curl" alias="symlocker_botman.curl" />
+        <!--caches-->
+        <service id="symlocker_botman.cache_array" class="BotMan\BotMan\Cache\ArrayCache" />
+        <service id="BotMan\BotMan\Cache\ArrayCache" alias="symlocker_botman.cache_array" />
+        <service id="symlocker_botman.cache_system" class="BotMan\BotMan\Cache\SymfonyCache" />
+        <service id="BotMan\BotMan\Cache\SymfonyCache" alias="symlocker_botman.cache_system" />
+        <service id="symlocker_botman.cache_doctrine" class="BotMan\BotMan\Cache\DoctrineCache" />
+        <service id="BotMan\BotMan\Cache\DoctrineCache" alias="symlocker_botman.cache_doctrine" />
+        <!--drivers-->
+        <service id="symlocker_botman.driver_manager" class="BotMan\BotMan\Drivers\DriverManager" />
+        <service id="BotMan\BotMan\Drivers\DriverManager" alias="symlocker_botman.driver_manager" />
+        <!--storages-->
+        <service id="symlocker_botman.storage_driver_file" class="BotMan\BotMan\Storages\Drivers\FileStorage" />
+        <service id="BotMan\BotMan\Storages\Drivers\FileStorage" alias="symlocker_botman.storage_driver_file" />
+        <!--factory-->
+        <service id="symlocker_botman.factory" class="BotMan\BotMan\BotManFactory" />
+        <service id="BotMan\BotMan\BotManFactory" alias="symlocker_botman.factory" />
+    </services>
+
+</container>
